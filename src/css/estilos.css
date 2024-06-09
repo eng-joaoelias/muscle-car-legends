@@ -1,81 +1,143 @@
-/* Arquivo CSS final */
-
 body {
-  font-family: 'Outfit', sans-serif; /* Fonte personalizada para melhor legibilidade */
-  background-image: url('../imagens/fundo-garagem.jpg'); /* Caminho correto para a imagem */
-  background-repeat: no-repeat; /* Repetir a imagem apenas uma vez */
-  background-size: cover; /* Cobrir toda a tela proporcionalmente */
-  min-height: 100vh; /* Altura mínima igual à viewport */
-  backdrop-filter: blur(4px); /* Efeito blur suave */
+    font-family: 'Outfit', sans-serif;
+    background-image: url('../imagens/fundo-garagem.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* altura mínima da página de 100% da viewport da tela */
+    backdrop-filter: blur(4px);
 }
 
 .cabecalho {
-  text-align: center; /* Alinhamento central */
-  padding: 66px 0; /* Espaçamento superior e inferior */
+    text-align: center;
+    padding: 66px 0;
 }
 
 .cabecalho h1 {
-  color: #F1ECFF; /* Cor contrastante para melhor leitura */
-  font-size: 45px; /* Tamanho de fonte adequado */
-  letter-spacing: 0.52083vw; /* Espaçamento entre letras para melhor legibilidade */
-  text-transform: uppercase; /* Texto em maiúsculas para destaque */
+    color: #F1ECFF;
+    font-size: 45px;
+    letter-spacing: 0.52083vw;
+    text-transform: uppercase;
 }
 
 .carros-slider {
-  display: flex; /* Layout flexbox para organização */
-  flex-direction: row; /* Direção da linha horizontal */
-  justify-content: center; /* Alinhamento central na horizontal */
-  align-items: center; /* Alinhamento central na vertical */
-  gap: 80px; /* Espaçamento entre os cards */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 80px;
 }
 
 .lista-muscle-cars {
-  width: 330px; /* Largura fixa para responsividade */
-  height: 520px; /* Altura fixa para responsividade */
-  position: relative; /* Posicionamento para camadas */
-  padding: 12px; /* Espaçamento interno */
+    width: 330px;
+    height: 520px;
+    position: relative;
+    padding: 12px;
 }
 
 .btn-seta {
-  background-color: #fff; /* Cor branca para contraste */
-  width: 70px; /* Largura adequada para interação */
-  height: 70px; /* Altura adequada para interação */
-  border-radius: 100%; /* Borda arredondada para visual moderno */
-  border: none; /* Remover borda */
-  cursor: pointer; /* Indicar interação ao usuário */
-  display: flex; /* Layout flexbox para centralizar conteúdo */
-  align-items: center; /* Alinhamento central na vertical */
-  justify-content: center; /* Alinhamento central na horizontal */
-  transition: background-color 0.25s ease-in-out; /* Transição suave na cor */
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Sombra sutil para destaque */
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .btn-seta.btn-voltar {
-  transform: rotate(180deg); /* Rotação para indicar direção */
+    transform: rotate(180deg);
 }
 
 .btn-seta:hover {
-  background-color: #8351FE; /* Cor de hover para feedback visual */
+    background-color: #8351FE;
 }
 
 .cartao {
-  opacity: 0; /* Opacidade inicial para controle de transição */
-  height: 100%; /* Altura total do card */
-  position: absolute; /* Posicionamento absoluto para sobreposição */
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Sombra sutil para destaque */
-  border-radius: 12px; /* Borda arredondada para visual moderno */
-  transition: opacity 0.3s ease-in-out; /* Transição suave na opacidade */
-  display: flex; /* Layout flexbox para organização */
-  flex-direction: column; /* Direção da coluna para melhor aproveitamento do espaço */
-  justify-content: space-between; /* Distribuição vertical com espaço entre elementos */
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    transition: opacity 0.3s ease-in-out;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cartao.selecionado {
-  opacity: 1; /* Opacidade total para card selecionado */
-  z-index: 9999; /* Z-index alto para sobreposição */
+    opacity: 1;
+    z-index: 9999;
 }
 
 .cartao .imagem-carro {
-  width: 100%; /* Ocupar toda a largura do card */
-  max-height: 280px; /* Altura máxima para evitar corte de conteúdo */
-  object-fit:
+    width: 100%;
+    max-height: 280px;
+}
+
+.cartao .nome {
+    background-color: rgba(179, 177, 185, 0.7);
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.2604167vw;
+}
+
+.cartao .descricao {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao .descricao .titulo {
+    background-color: #333;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px;
+}
+
+.cartao .descricao .texto {
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 110px;
+    overflow-y: auto;
+}
+
+.cartao.fundo-1 {
+    background: url('../imagens/fundo-1.jpg');
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-2 {
+    background: url('../imagens/fundo-2.jpg');
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-3 {
+    background: url('../imagens/fundo-3.jpg');
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-4 {
+    background: url('../imagens/fundo-4.jpg');
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-5 {
+    background: url('../imagens/fundo-5.jpg');
+    background-repeat: no-repeat;
+}
+
+.cartao.fundo-6 {
+    background: url('../imagens/fundo-6.jpg');
+    background-repeat: no-repeat;
+}
