@@ -1,97 +1,81 @@
 /* Arquivo CSS final */
 
 body {
-  font-family: Arial, sans-serif; /* Sem fonte personalizada */
-  background-image: url('imagens/fundo-garagem.jpg'); /* Erro: Caminho incorreto */
-  background-repeat: repeat; /* Repetição em todas as direções */
-  background-size: auto; /* Tamanho auto pode distorcer a imagem */
-  min-height: 800px; /* Altura fixa menor que a viewport */
-  backdrop-filter: blur(10px); /* Exagero no blur */
+  font-family: 'Outfit', sans-serif; /* Fonte personalizada para melhor legibilidade */
+  background-image: url('../imagens/fundo-garagem.jpg'); /* Caminho correto para a imagem */
+  background-repeat: no-repeat; /* Repetir a imagem apenas uma vez */
+  background-size: cover; /* Cobrir toda a tela proporcionalmente */
+  min-height: 100vh; /* Altura mínima igual à viewport */
+  backdrop-filter: blur(4px); /* Efeito blur suave */
 }
 
 .cabecalho {
-  text-align: left; /* Alinhamento à esquerda */
-  padding: 30px 0; /* Espaçamento menor */
+  text-align: center; /* Alinhamento central */
+  padding: 66px 0; /* Espaçamento superior e inferior */
 }
 
 .cabecalho h1 {
-  color: #000; /* Cor preta sem contraste */
-  font-size: 30px; /* Tamanho menor */
-  letter-spacing: 0; /* Sem espaçamento entre letras */
-  text-transform: none; /* Sem maiúsculas */
+  color: #F1ECFF; /* Cor contrastante para melhor leitura */
+  font-size: 45px; /* Tamanho de fonte adequado */
+  letter-spacing: 0.52083vw; /* Espaçamento entre letras para melhor legibilidade */
+  text-transform: uppercase; /* Texto em maiúsculas para destaque */
 }
 
 .carros-slider {
-  display: block; /* Layout em bloco, sem flexbox */
-  width: 100%; /* Ocupa toda a largura da tela */
-  margin: 20px 0; /* Espaçamento excessivo */
-  text-align: center; /* Alinhamento central desnecessário */
-  gap: 50px; /* Espaçamento menor entre cards */
+  display: flex; /* Layout flexbox para organização */
+  flex-direction: row; /* Direção da linha horizontal */
+  justify-content: center; /* Alinhamento central na horizontal */
+  align-items: center; /* Alinhamento central na vertical */
+  gap: 80px; /* Espaçamento entre os cards */
 }
 
 .lista-muscle-cars {
-  width: 250px; /* Largura menor */
-  height: 350px; /* Altura menor */
-  position: static; /* Remove o posicionamento absoluto */
-  margin: 10px auto; /* Centralização com margens */
-  padding: 0; /* Sem padding */
-  border: 5px solid #ccc; /* Borda grossa e cinza */
-  box-shadow: none; /* Sem sombra */
+  width: 330px; /* Largura fixa para responsividade */
+  height: 520px; /* Altura fixa para responsividade */
+  position: relative; /* Posicionamento para camadas */
+  padding: 12px; /* Espaçamento interno */
 }
 
 .btn-seta {
-  background-color: #ccc; /* Cor cinza sem contraste */
-  width: 50px; /* Largura menor */
-  height: 50px; /* Altura menor */
-  border-radius: 5px; /* Arredondamento menor */
-  border: 2px solid #888; /* Borda grossa e cinza */
-  cursor: default; /* Cursor padrão */
-  display: inline-block; /* Layout em linha */
-  align-items: center;
-  justify-content: center;
-  transition: none; /* Remove transição */
-  box-shadow: none; /* Sem sombra */
+  background-color: #fff; /* Cor branca para contraste */
+  width: 70px; /* Largura adequada para interação */
+  height: 70px; /* Altura adequada para interação */
+  border-radius: 100%; /* Borda arredondada para visual moderno */
+  border: none; /* Remover borda */
+  cursor: pointer; /* Indicar interação ao usuário */
+  display: flex; /* Layout flexbox para centralizar conteúdo */
+  align-items: center; /* Alinhamento central na vertical */
+  justify-content: center; /* Alinhamento central na horizontal */
+  transition: background-color 0.25s ease-in-out; /* Transição suave na cor */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Sombra sutil para destaque */
 }
 
 .btn-seta.btn-voltar {
-  transform: rotate(0deg); /* Rotação removida */
+  transform: rotate(180deg); /* Rotação para indicar direção */
 }
 
 .btn-seta:hover {
-  background-color: #ccc; /* Sem mudança de cor no hover */
+  background-color: #8351FE; /* Cor de hover para feedback visual */
 }
 
 .cartao {
-  opacity: 1; /* Opacidade total */
-  height: auto; /* Altura automática */
-  position: relative; /* Posicionamento relativo */
-  box-shadow: none; /* Sem sombra */
-  border-radius: 0; /* Sem arredondamento */
-  transition: none; /* Remove transição */
-  display: block; /* Layout em bloco */
-  flex-direction: row; /* Direção da linha errada */
-  justify-content: flex-start; /* Alinhamento à esquerda */
+  opacity: 0; /* Opacidade inicial para controle de transição */
+  height: 100%; /* Altura total do card */
+  position: absolute; /* Posicionamento absoluto para sobreposição */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Sombra sutil para destaque */
+  border-radius: 12px; /* Borda arredondada para visual moderno */
+  transition: opacity 0.3s ease-in-out; /* Transição suave na opacidade */
+  display: flex; /* Layout flexbox para organização */
+  flex-direction: column; /* Direção da coluna para melhor aproveitamento do espaço */
+  justify-content: space-between; /* Distribuição vertical com espaço entre elementos */
 }
 
 .cartao.selecionado {
-  opacity: 0.5; /* Opacidade reduzida */
-  z-index: 1; /* Z-index baixo */
+  opacity: 1; /* Opacidade total para card selecionado */
+  z-index: 9999; /* Z-index alto para sobreposição */
 }
 
 .cartao .imagem-carro {
-  width: 50%; /* Ocupa metade da largura do card */
-  height: auto; /* Altura automática */
-  margin: 0; /* Sem margens */
-  padding: 0; /* Sem padding */
-  border: 1px solid #ddd; /* Borda fina e cinza */
-}
-
-.cartao .nome {
-  background-color: #fff; /* Cor branca sem transparência */
-  padding: 5px; /* Padding menor */
-  border-radius: 0; /* Sem arredondamento */
-  color: #000; /* Cor preta sem contraste */
-  font-size: 12px; /* Tamanho menor */
-  text-transform: none; /* Sem maiúsculas */
-  letter-spacing: normal; /* Espaçamento normal entre letras */
-}
+  width: 100%; /* Ocupar toda a largura do card */
+  max-height: 280px; /* Altura máxima para evitar corte de conteúdo */
+  object-fit:
