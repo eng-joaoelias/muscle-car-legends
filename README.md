@@ -1,32 +1,68 @@
 # Muscle Car Legends
 
-Bem-vindo ao projeto "Muscle Car Legends"! Este projeto é uma homenagem aos icônicos muscle cars dos anos 1970, combinando minha paixão pelo automobilismo com habilidades adquiridas em desenvolvimento web. 
+"Muscle Car Legends" é um projeto web que celebra os icônicos muscle cars dos anos 1970. Inspirado na potência e no design arrojado desses veículos clássicos, esta página apresenta uma galeria de carros lendários, cada um com uma descrição detalhada. O projeto utiliza animações CSS para criar uma experiência visual atraente e dinâmica.
 
-## Descrição
+## Visão Geral
 
-O site "Muscle Car Legends" apresenta alguns dos mais famosos muscle cars dos anos 1970, incluindo Chevrolet Camaro Z28, Dodge Challenger, Ford Mustang Boss 302, Plymouth Barracuda, Pontiac Firebird Trans Am e Chevrolet Chevelle SS. Cada carro é exibido com uma imagem e uma descrição detalhada, destacando suas características e história.
+### Funcionalidades
 
-## Funcionalidades
+- **Galeria de Muscle Cars**: Exibição de alguns dos muscle cars mais famosos dos anos 1970, incluindo Chevrolet Camaro Z28, Dodge Challenger, Ford Mustang Boss 302, e mais.
+- **Animação do Cabeçalho**: Uma animação de foco de texto no título da página para uma entrada visualmente impressionante.
 
-- **Slider de Carros:** Navegue entre diferentes carros usando botões de seta.
-- **Animação no Cabeçalho:** O título "Muscle Car Legends" possui uma animação de foco, criando um efeito de entrada impressionante.
+### Tecnologias Utilizadas
 
-## Tecnologias Utilizadas
+- **HTML5**: Para estruturação do conteúdo.
+- **CSS3**: Para estilização e animações.
+- **JavaScript**: Para interatividade (navegação através dos carros).
+- **Google Fonts**: Para a fonte 'Outfit'.
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+## Estrutura do Projeto
 
-## Animação no Cabeçalho
+```bash
+MuscleCarLegends/
+├── src/
+│   ├── css/
+│   │   ├── estilos.css
+│   │   ├── reset.css
+│   │   └── responsivo.css
+│   ├── imagens/
+│   │   ├── camaro-z28.jpg
+│   │   ├── dodge-challenger.jpg
+│   │   ├── mustang-boss-302.jpg
+│   │   ├── plymouth-barracuda.jpg
+│   │   ├── pontiac-trans-am.jpg
+│   │   └── chevelle-ss.jpg
+│   ├── js/
+│   │   └── script.js
+├── index.html
+└── README.md
+```
 
-O título do cabeçalho possui uma animação que aplica um efeito de foco ao texto. A animação é definida com `@keyframes` e `@-webkit-keyframes`, criando um efeito suave de desfoque que gradualmente traz o texto para foco total.
+## Instruções de Uso
+
+1. **Clonar o Repositório**
+
+    ```bash
+    git clone https://github.com/eng-joaoelias/muscle-car-legends.git
+    ```
+
+2. **Abrir o Arquivo HTML**
+
+    Abra o arquivo `index.html` em seu navegador preferido.
+
+## Animações CSS
+
+O título do cabeçalho utiliza uma animação de foco de texto para criar uma entrada visualmente impressionante. Aqui está o código CSS usado para essa animação:
 
 ```css
 .cabecalho h1 {
-    color: #F1ECFF;
-    font-size: 45px;
-    letter-spacing: 0.52083vw;
-    text-transform: uppercase;
+    /*
+        [...]
+    Estilos do <h1>
+        [...]
+    */
+
+    /*Chamada para as animações*/
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
@@ -58,51 +94,14 @@ O título do cabeçalho possui uma animação que aplica um efeito de foco ao te
 }
 ```
 
-## Estrutura do Projeto
+## Contribuições
 
-```plaintext
-.
-├── src
-│   ├── css
-│   │   ├── reset.css
-│   │   ├── estilos.css
-│   │   └── responsivo.css
-│   ├── imagens
-│   │   ├── camaro-z28.png
-│   │   ├── dodge-challenger.png
-│   │   ├── mustang-boss-302.png
-│   │   ├── plymouth-barracuda.png
-│   │   ├── pontiac-trans-am.png
-│   │   └── chevelle-ss.png
-│   ├── js
-│   │   └── script.js
-│   └── audio
-│       └── SmokeOnTheWater.mp3 (não utilizado devido a restrições do navegador)
-└── index.html
-```
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
 
-## Como Usar
+## Licença
 
-1. **Clone o repositório:**
+Este projeto está licenciado sob a [MIT License](LICENSE).
 
-```bash
-git clone https://github.com/eng-joaoelias/muscle-car-legends.git
-```
+## Agradecimentos
 
-2. **Navegue até o diretório do projeto:**
-
-```bash
-cd muscle-car-legends
-```
-
-3. **Abra o arquivo `index.html` no seu navegador:**
-
-Você pode simplesmente clicar duas vezes no arquivo ou usar uma extensão de servidor local como "Live Server" para VSCode.
-
-## Contato
-
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
-
-- LinkedIn: [Meu LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-elias-ferraz-santana-9a47a218a/)
-
-Espero que você aproveite explorar o "Muscle Car Legends" tanto quanto eu aproveitei desenvolvê-lo!
+Este projeto é uma homenagem à era de ouro dos muscle cars dos anos 1970, refletindo minha paixão pessoal pelo automobilismo e a alegria de aprender e aplicar novas tecnologias web.
