@@ -3,7 +3,8 @@ body {
     background-image: url('../imagens/fundo-garagem.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh; /* altura mínima da página de 100% da viewport da tela */
+    min-height: 100vh;
+    /* altura mínima da página de 100% da viewport da tela */
     backdrop-filter: blur(4px);
 }
 
@@ -17,6 +18,8 @@ body {
     font-size: 45px;
     letter-spacing: 0.52083vw;
     text-transform: uppercase;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .carros-slider {
@@ -64,7 +67,6 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 12px;
     transition: opacity 0.3s ease-in-out;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -141,3 +143,39 @@ body {
     background: url('../imagens/fundo-6.jpg');
     background-repeat: no-repeat;
 }
+
+/* ANIMACOES */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
