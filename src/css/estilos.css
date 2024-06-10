@@ -79,7 +79,7 @@ body {
 
 .cartao .imagem-carro {
     width: 100%;
-    max-height: 280px;
+    height: auto;
 }
 
 .cartao .nome {
@@ -178,4 +178,3 @@ body {
         opacity: 1;
     }
 }
-
